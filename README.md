@@ -1,6 +1,5 @@
-**Final Report**
-
 **Introduction**
+
 Every day, hundreds of restaurants open around the world and add to the thousands of businesses
 to choose from. Yelp.com is a website that provides reviews obtained from the public about
 restaurants and small businesses. The website garners thousands of visitors every day because of
@@ -12,11 +11,13 @@ variables such as review sentiments, length of the text and number of useful, fu
 votes received by the review.
 
 **Problem Description**
+
 Our main goal was to run a regression model on a collection of reviews and predict the number
 of stars (ratings) given a sentiment score and a few other predictor variables such as the length of
 the text, and the number of useful, funny, and cool votes received by the text in Spark R.
 
 **Related Work**
+
 Yelp Dataset Challenge has completed 10 rounds to date and currently is in round 11, which
 started on January 18, 2018. The round closes on June 30, 2018. The following two links contain
 information on the Yelp Dataset. The first one shows all previous winners of the Yelp Dataset
@@ -30,6 +31,7 @@ Links are as follows:-
 ● https://scholar.google.com/scholar?q=citation%3A+Yelp+Dataset&btnG=&hl=en&as_sdt=0%2C5.
 
 **Dataset Description**
+
 Yelp has generously provided multiple datasets to analyze for this challenge. All the datasets are
 of either JSON or SQL type. For our analysis, we chose the datasets that are of JSON type and
 specifically the review.json dataset. The datasets and their descriptions are as follows:-
@@ -52,6 +54,7 @@ Fortunately, Yelp had posted the same datasets to kaggle in CSV format, so we us
 specifically.
 
 **Steps to retrieve data from AWS S**
+
 Since Databricks only allows a maximum of 1GB of local storage, we decided to store
 review.csv in an AWS S3 bucket. This was then accessed inside Databricks using an R package
 called aws.s3. To connect to the bucket and get the object, we had to pass an AWS Access Key,
@@ -60,6 +63,7 @@ CSV file, we converted this object into a dataframe and stored the same in the v
 yelpData.
 
 **Preprocessing Techniques**
+
 The review.csv dataset originally had 5.2 million rows. To save time and computational
 requirements, we reduced it down to 120,216 rows and uploaded it to AWS S3 under the name
 “yelp_review”. This was done using a software called csv splitter. The steps that we followed to
@@ -100,6 +104,7 @@ Lastly, the dataset was split into 75% training data and 25% testing data as inp
 regression models.
 
 **Proposed Solution and Methods**
+
 Our plan was to try four regression machine learning algorithms (Linear Regression, Decision
 Tree, Random Forest and Boosting) to get a solid understanding of how each variable correlated
 with the number of stars. This would also provide enough results to see why one model
@@ -108,6 +113,7 @@ model as a metric and compare all correlation accuracies of all models to see wh
 algorithm/model performed better on our dataset.
 
 **Experimental Results and Analysis**
+
 In all models, we used :
 Target - stars
 Predictors - useful, funny, cool, textLength , textSentimentScore
@@ -143,6 +149,7 @@ which resulted in improved performance. Moreover, each tree has a better fit on 
 version of the previous tree when Boosting is used.
 
 **Conclusion**
+
 The best performing algorithm was the Boosting algorithm with the accuracy of 70.15%.
 Overall, the models we ran averaged around 67% accuracy. This was what we were expecting
 since the dataset has more than 100,000 rows and contains raw information from thousands of
@@ -153,6 +160,7 @@ preprocessing techniques, and other big data analytics technologies.
 
 
 **References**
+
 "Yelp Dataset." ​ _Yelp.com_ ​. N. p., 2018. Web. 22 Apr. 2018.
 "Sparkr (R On Spark) - Spark 2.3.0 Documentation." Spark.apache.org. N. p., 2018. Web. 22 Apr.
 2018.
