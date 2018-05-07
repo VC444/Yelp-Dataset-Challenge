@@ -37,14 +37,20 @@ of either JSON or SQL type. For our analysis, we chose the datasets that are of 
 specifically the review.json dataset. The datasets and their descriptions are as follows:-
 
 ● Business.json - Contains business data about location, categories and their ratings.
+
 ● Review.json - Contains reviews written by users for a particular business, ratings and
 their votes.
+
 ● User.json - Contains users attributes such as their name, number of reviews given, date
 since they are yelping and number of votes received.
+
 ● Checkin.json - Contains business timings and number of people come in that timing.
+
 ● Tip.json - Contains shorter reviews and its attributes to convey information quickly
 about a particular business.
+
 ● Photos.json - Contains photo, business id, caption of the photo and category it belongs to.
+
 Overall, the dataset has 5,200,000 reviews, 174,000 businesses, 200,000 pictures, 11
 metropolitan areas, and 1,100,000 tips given by 1,300,000 users. In business.csv, there are over
 1.2 million business attributes such as parking, availability, ambience and hours. Moreover, there
