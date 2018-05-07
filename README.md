@@ -1,3 +1,7 @@
+This markdown file was converted from pdf format.
+
+Click this link to view the pdf version: https://akshayrameshappdev.github.io/Final%20Report%20-%20Big%20Data.pdf
+
 **Introduction**
 
 Every day, hundreds of restaurants open around the world and add to the thousands of businesses
@@ -59,7 +63,7 @@ Working with JSON was comparatively much harder to work with than CSV in databri
 Fortunately, Yelp had posted the same datasets to kaggle in CSV format, so we used review.csv
 specifically.
 
-**Steps to retrieve data from AWS S**
+**Steps to retrieve data from AWS S3**
 
 Since Databricks only allows a maximum of 1GB of local storage, we decided to store
 review.csv in an AWS S3 bucket. This was then accessed inside Databricks using an R package
